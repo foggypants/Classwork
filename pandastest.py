@@ -51,9 +51,24 @@ print(d.sort_values(by='Age', ascending=False))
 
 d=pd.DataFrame({'Team':['A','A','B','B'],'Score':[10,20,10,30]})
 print(d.groupby('Team').sum())
-'''
+
 df=pd.DataFrame({'A':[1,2,3]}, index=['x','y','z'])
 df1=pd.DataFrame({'B':[4,5,6]}, index=['x','y','z'])
 print(df.join(df1))
 
 
+df1=pd.DataFrame({"A": [1,2,3,4]})
+df2=pd.DataFrame({"A": [4,5,6,7]})
+print(pd.concat([df1,df2]))
+print(pd.concat([df1,df2],axis=1))
+
+df=pd.DataFrame({'Date':['2025-01-01','2025-02-01','2025-03-01']})
+df['Date']=pd.to_datetime(df['Date'])
+print(df['Date'].dt.month)
+print(df['Date'].dt.day)
+
+print(df[df['Date']>'2025-02-01'])
+'''
+df=pd.read_csv('data.csv')
+print(df)
+df.to_csv('output.csv', index=False)
