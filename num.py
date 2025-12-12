@@ -39,7 +39,7 @@ print(arr.reshape(6,2))
 def f(x,y=5,*args):
     return x+y+sum(args)
 print(f(2,3,4,5))
-'''
+
 a=np.arange(0,9).reshape(3,3)
 print(a[1,:])
 x=None
@@ -47,3 +47,13 @@ if x:
     print("yes")
 else:
     print("no")
+'''
+arr=np.array([10,20,30,40,50,60])
+
+print("Mean:",np.mean(arr))
+print("Median:",np.median(arr))
+print("Standard deviation:",np.std(arr))
+print("Variance:",np.var(arr))
+print("Sum:",np.sum(arr))
+print("Min:",np.min(arr))
+print("Max:",np.max(arr))

@@ -71,4 +71,4 @@ print(df[df['Date']>'2025-02-01'])
 '''
 df=pd.read_csv('data.csv')
 print(df)
-df.to_csv('output.csv', index=False)
+df.to_csv('outpu.csv', index=False)
